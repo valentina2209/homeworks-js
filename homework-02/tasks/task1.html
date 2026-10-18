@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Задача №1</h1>
+
+      <p>
+        Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у
+        формі таблиці
+      </p>
+
+      <div class="result">
+        <script>
+          const numberFirst = parseFloat(
+            prompt("Введіть перше дійсне число", 0),
+          );
+          const numberSecond = parseFloat(
+            prompt("Введіть друге дійсне число", 0),
+          );
+
+          const sum = numberFirst + numberSecond;
+          const multiplication = numberFirst * numberSecond;
+          const quotient = numberFirst / numberSecond;
+
+          document.write(`
+            <table style="border: 4px double #00b894; border-collapse: collapse;">
+				      <tr>
+					      <th style="padding: 6px; border: 1px solid #00b894;">Математична операція</th>
+                <th style="padding: 6px; border: 1px solid #00b894;">Результат</th>
+              </tr>
+				      <tr>
+					      <td style="padding: 6px; border: 1px solid #00b894;">Сума</td>
+					      <td style="padding: 6px; border: 1px solid #00b894;">${sum.toFixed(2)}</td>
+				      </tr>
+				      <tr>
+					      <td style="padding: 6px; border: 1px solid #00b894;">Добуток</td>
+					      <td style="padding: 6px; border: 1px solid #00b894;">${multiplication.toFixed(2)}</td>
+				      </tr>
+				      <tr>
+					      <td style="padding: 6px; border: 1px solid #00b894;">Частка</td>
+					      <td style="padding: 6px; border: 1px solid #00b894;">${quotient.toFixed(2)}</td>
+				      </tr>
+			      </table>
+          `);
+        </script>
+      </div>
+
+      <a href="../index.html" class="btn-back">Назад до списку</a>
+    </div>
+  </body>
+</html>

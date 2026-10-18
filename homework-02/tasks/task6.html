@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Задача №6</h1>
+
+      <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+        Обчислити вартість кожного товару окремо та загальну вартість. Вивести
+        чек (як у супермаркеті) використовуючи елементи розмітки.
+      </p>
+
+      <div class="result">
+        <script>
+          const costOfFirstProduct = parseFloat(
+            prompt("Введіть вартість першого товару, грн", 0),
+          );
+          const quantityOfFirstProduct = parseFloat(
+            prompt("Введіть кількість першого товару, шт", 0),
+          );
+
+          const costOfSecondProduct = parseFloat(
+            prompt("Введіть вартість другого товару, грн", 0),
+          );
+          const quantityOfSecondProduct = parseFloat(
+            prompt("Введіть кількість другого товару, шт", 0),
+          );
+
+          const costOfThirdProduct = parseFloat(
+            prompt("Введіть вартість третього товару, грн", 0),
+          );
+          const quantityOfThirdProduct = parseFloat(
+            prompt("Введіть кількість третього товару, шт", 0),
+          );
+
+          const totalFirstProduct = costOfFirstProduct * quantityOfFirstProduct;
+          const totalSecondProduct =
+            costOfSecondProduct * quantityOfSecondProduct;
+          const totalThirdProduct = costOfThirdProduct * quantityOfThirdProduct;
+
+          const totalPriceProduct =
+            totalFirstProduct + totalSecondProduct + totalThirdProduct;
+          document.write(`
+            <div style="width: 280px; margin: 20px auto; padding: 15px; background-color: #fff8e7; font-family: 'Courier New', Courier, monospace; font-size: 13px; color: #222; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); border-top: 2px dashed #888; border-bottom: 2px dashed #888;">
+              <!-- Шапка чека -->
+              <div style="text-align: center;">
+                <strong>ТОВ "СУПЕРМАРКЕТ"</strong><br>
+                м. Київ, вул. Хрещатик, 1<br>
+                ЧЕК № 004829<br>
+                -------------------------------
+              </div>
+
+              <!-- Таблиця з товарами -->
+              <table style="width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 10px;">
+                <thead>
+                  <tr>
+                    <th style="border-bottom: 1px dashed #333; padding-bottom: 5px; text-align: left;">Вартість</th>
+                    <th style="border-bottom: 1px dashed #333; padding-bottom: 5px; text-align: center;">К-сть</th>
+                    <th style="border-bottom: 1px dashed #333; padding-bottom: 5px; text-align: right;">Сума</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 4px 0; vertical-align: top;">${costOfFirstProduct} грн</td>
+                    <td style="padding: 4px 0; vertical-align: top; text-align: center;">${quantityOfFirstProduct} шт</td>
+                    <td style="padding: 4px 0; vertical-align: top; text-align: right;">${totalFirstProduct} грн</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 4px 0; vertical-align: top;">${costOfSecondProduct} грн</td>
+                    <td style="padding: 4px 0; vertical-align: top; text-align: center;">${quantityOfSecondProduct} шт</td>
+                    <td style="padding: 4px 0; vertical-align: top; text-align: right;">${totalSecondProduct} грн</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 4px 0; vertical-align: top;">${costOfThirdProduct} грн</td>
+                    <td style="padding: 4px 0; vertical-align: top; text-align: center;">${quantityOfThirdProduct} шт</td>
+                    <td style="padding: 4px 0; vertical-align: top; text-align: right;">${totalThirdProduct} грн</td>
+                  </tr>
+        
+                  <!-- Розділювальна лінія -->
+                  <tr>
+                    <td colspan="3" style="border-top: 1px dashed #333; padding: 0;"></td>
+                  </tr>
+
+                  <!-- Підсумок -->
+                  <tr>
+                    <td colspan="2" style="padding-top: 6px; font-weight: bold; font-size: 14px;">СУМА:</td>
+                    <td style="padding-top: 6px; font-weight: bold; font-size: 14px; text-align: right;">${totalPriceProduct} грн</td>
+                  </tr>
+              </table>
+
+              <!-- Футер чека -->
+              <div style="text-align: center;">
+                -------------------------------<br>
+                18.10.2026 15:30<br>
+                ДЯКУЄМО ЗА ПОКУПКУ!
+              </div>
+            </div>
+          `);
+        </script>
+      </div>
+
+      <a href="../index.html" class="btn-back">Назад до списку</a>
+    </div>
+  </body>
+</html>
