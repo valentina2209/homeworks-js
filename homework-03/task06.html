@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Задача 6</title>
+    <script src="javascript/task-06.js"></script>
+  </head>
+  <body>
+    <div class="hw-wrapper">
+      <a href="index.html" class="hw-back-btn"> ← Назад до списку задач </a>
+
+      <main class="hw-single-layout">
+        <div class="hw-task-box">
+          <div class="hw-task-box__header">
+            <span class="hw-card__badge">06</span>
+            <h1 class="hw-card__title" style="font-size: 1.3rem">
+              Визначення дня тижня
+            </h1>
+          </div>
+          <p class="hw-card__desc" style="margin-top: 12px">
+            З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.
+          </p>
+        </div>
+
+        <script>
+          document.write(`
+            <div class="hw-result-box">
+              <h2 class="hw-result-title">Результати:</h2>
+              <div class="hw-result-conclusion">
+                Ви ввели <strong>${numberDay}</strong>. Це: <span>${resultDay}</span>
+              </div>
+            </div>
+          `);
+        </script>
+      </main>
+    </div>
+  </body>
+</html>

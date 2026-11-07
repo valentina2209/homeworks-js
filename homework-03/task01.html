@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Задача 1</title>
+    <!-- Підключення скрипта задачі -->
+    <script src="/javascript/task-01.js"></script>
+  </head>
+  <body>
+    <div class="hw-wrapper">
+      <!-- Кнопка повернення назад до списку -->
+      <a href="index.html" class="hw-back-btn"> ← Назад до списку задач </a>
+
+      <main class="hw-single-layout">
+        <!-- Картка з умовою задачі -->
+        <div class="hw-task-box">
+          <div class="hw-task-box__header">
+            <span class="hw-card__badge">01</span>
+            <h1 class="hw-card__title" style="font-size: 1.3rem">
+              Порівняння цукерок
+            </h1>
+          </div>
+          <p class="hw-card__desc" style="margin-top: 12px">
+            З клавіатури вводяться імена двох дітей та кількість у них цукерок.
+            Вивести на екран ім’я тієї дитини, у якої кількість цукерок є
+            більшою, або вивести, що кількість однакова.
+          </p>
+        </div>
+
+        <!-- Блок для виводу результатів через JavaScript -->
+        <script>
+          document.write(`
+            <div class="hw-result-box">
+              <h2 class="hw-result-title">Результати обчислення:</h2>
+              <ul class="hw-result-list">
+                <li><span>${nameFirstChild}</span> має <strong>${amountCandyOfFirstChild}</strong> цукерок</li>
+                <li><span>${nameSecondChild}</span> має <strong>${amountCandyOfSecondChild}</strong> цукерок</li>
+              </ul>
+              <div class="hw-result-conclusion">
+                <span>${nameFirstChild}</span> має <strong>${result}</strong> цукерок ніж (як і) ${nameSecondChild}
+              </div>
+            </div>
+          `);
+        </script>
+      </main>
+    </div>
+  </body>
+</html>
